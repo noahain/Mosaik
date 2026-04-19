@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*::-webkit-scrollbar {
+  display: none !important;
+}
+
+html, body {
+  overflow: hidden;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: #1a1a1a;
+  overflow: hidden;
+}
+
+.sidebar {
+  width: 50px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 12px 0;
+}
+
+.app-icon {
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.app-icon .logo {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+.search-button {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 8px;
+  color: #8e8e8e;
+  transition: all 0.2s ease;
+  margin-bottom: 12px;
+}
+
+.search-button:hover {
+  background: #2d2d2d;
+  color: #fff;
+}
+
+.search-button svg {
+  width: 20px;
+  height: 20px;
+}
+
+.services-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+  width: 100%;
+  align-items: center;
+}
+
+.service-item {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 8px;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.service-item:hover {
+  background: #2d2d2d;
+}
+
+.service-item.active {
+  background: #2d2d2d;
+}
+
+.service-item.active::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3px;
+  height: 20px;
+  background: #4a9eff;
+  border-radius: 0 2px 2px 0;
+}
+
+.service-item img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.service-item svg {
+  width: 20px;
+  height: 20px;
+}

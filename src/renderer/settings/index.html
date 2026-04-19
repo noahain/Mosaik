@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Mosaik Settings</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="settings-container">
+    <div class="header">
+      <h1>Settings</h1>
+      <button id="addServiceBtn" class="btn-primary">Add Service</button>
+    </div>
+
+    <div class="service-list" id="serviceList">
+      <div class="list-header">
+        <span>Service</span>
+        <span>Controls</span>
+      </div>
+      <div id="servicesContainer"></div>
+    </div>
+
+    <div class="global-settings">
+      <h2>Global Settings</h2>
+      <div class="setting-item">
+        <label>
+          <span>Global Shortcut</span>
+          <div class="shortcut-editor">
+            <input type="text" id="globalShortcut" value="Ctrl+Space" readonly>
+            <button id="recordShortcutBtn" class="btn-secondary">Edit</button>
+          </div>
+        </label>
+      </div>
+      <div class="setting-item">
+        <label>
+          <span>Search Mode</span>
+          <div class="search-mode-toggle">
+            <span class="mode-label" id="searchModeLabel">Global</span>
+            <div class="toggle" id="searchModeToggle"></div>
+          </div>
+        </label>
+      </div>
+      <div class="setting-item">
+        <label>
+          <span>Run at Startup</span>
+          <input type="checkbox" id="runAtStartup">
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <!-- Add Service Modal -->
+  <div class="modal" id="addServiceModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>Add Custom Service</h3>
+        <button class="close-btn" id="closeModal">&times;</button>
+      </div>
+      <form id="addServiceForm">
+        <div class="form-group">
+          <label>Name</label>
+          <input type="text" id="serviceName" required>
+        </div>
+        <div class="form-group">
+          <label>URL</label>
+          <input type="url" id="serviceUrl" required>
+        </div>
+        <div class="form-group">
+          <label>Icon Path</label>
+          <input type="file" id="serviceIcon" accept=".svg,.png,.jpg">
+        </div>
+        <div class="form-group checkbox-group">
+          <label class="checkbox-label">
+            <input type="checkbox" id="serviceIsPrivate">
+            <span>Private Session</span>
+          </label>
+          <p class="help-text">If checked, this service gets its own cookies. If unchecked, it shares cookies with other Global services.</p>
+        </div>
+        <div class="form-actions">
+          <button type="button" id="cancelAdd">Cancel</button>
+          <button type="submit" class="btn-primary">Add Service</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
