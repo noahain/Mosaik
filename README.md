@@ -20,6 +20,12 @@
   - **Private Mode**: Every service gets its own isolated "cookie jar"—perfect for managing multiple accounts on the same platform (e.g., Work ChatGPT vs. Personal ChatGPT).
 - **Persistent Storage**: All configurations and sessions are stored in the user's data directory (`%APPDATA%`), surviving app updates and reinstalls.
 
+### 📂 Data & Privacy
+Mosaik is designed to be self-contained and private. On the first launch, the app initializes a workspace in your system's protected data directory:
+- **Windows:** `%APPDATA%/roaming/mosaik`
+
+This folder contains your `services.json` (configuration), assets folder and isolated session partitions. **Mosaik never sends your cookies or credentials to any external server;** they stay strictly on your local machine.
+
 ### ⚡ Performance & Polish
 - **Memory Purge**: Unloads inactive AI models from RAM unless marked as "Always Loaded."
 - **Stealth Mode**: Custom User-Agent matching (Chrome 120/Electron 28) and `webdriver` spoofing to bypass bot detection.
