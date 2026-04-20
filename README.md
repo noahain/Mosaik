@@ -29,6 +29,10 @@ This folder contains your `services.json` (configuration), assets folder and iso
 - **Stealth Mode**: Custom User-Agent matching (Chrome 120/Electron 28) and `webdriver` spoofing to bypass bot detection.
 - **Chromeless UI**: Custom CSS injection to hide website scrollbars and original navigation sidebars for a truly native feel.
 
+![Mosaik Claude](assets/screenshots/claude.png)
+
+![Mosaik Chatgpt](assets/screenshots/chatgpt.png)
+
 ---
 
 ## 🛠️ Command Line Arguments
