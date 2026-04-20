@@ -51,7 +51,7 @@ Ensure you have [Node.js](https://nodejs.org/) (v18 or higher) installed on your
 ### 2. Setup
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/mosaik.git
+git clone https://github.com/noahain/mosaik
 
 # Enter the project folder
 cd mosaik
