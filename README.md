@@ -87,7 +87,7 @@ The installer appears in `dist/`. The build uses `assets/icons/icon.ico`.
 
 Electron · BrowserView · IPC · Node.js
 
-## Development story
+## Development team
 
 - **Lead:** Noahain - product design, security bypassing, logic direction
 - **Primary developer:** Claude Code (Kimi K2.5) - BrowserView architecture, IPC bridging
